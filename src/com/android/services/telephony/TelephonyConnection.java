@@ -363,10 +363,12 @@ private String getSuppSvcNotificationText(SuppServiceNotification suppSvcNotific
             break;
 
             case SuppServiceNotification.MO_CODE_SOME_CF_ACTIVE:
-                // This message is displayed when an outgoing call is made
-                // and conditional forwarding is enabled.
-                callForwardTxt = TelephonyGlobals.getApplicationContext().getString(
-                        R.string.card_title_conditionalCF);
+                if(!TelephonyManager.getDefault().getNetworkOperator().equals("22288")){
+                        // This message is displayed when an outgoing call is made
+                        // and conditional forwarding is enabled.
+                        callForwardTxt = TelephonyGlobals.getApplicationContext().getString(
+                                R.string.card_title_conditionalCF);
+                }
                 break;
 
             case SuppServiceNotification.MO_CODE_CALL_FORWARDED:
