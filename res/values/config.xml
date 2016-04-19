@@ -232,4 +232,6 @@
     <!-- Whether the emergency only account can make emergency calls -->
     <bool name="config_pstnCanPlaceEmergencyCalls">true</bool>
 
+    <!-- To  show VMNotification always until user reads it-->
+    <bool name="config_show_vm_notification_always" translatable="false">false</bool>
 </resources>
